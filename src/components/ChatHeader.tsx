@@ -10,7 +10,7 @@ export const ChatHeader = () => {
           </div>
           <div>
             <h1 className="font-display font-bold text-lg text-foreground">
-              JUET Guna Assistant
+              JUET HelpDesk
             </h1>
             <p className="text-xs text-muted-foreground">
               Your AI guide to admissions, placements & more

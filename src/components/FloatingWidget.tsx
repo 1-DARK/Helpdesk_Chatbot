@@ -34,7 +34,7 @@ export const FloatingWidget = ({ children }: FloatingWidgetProps) => {
             </div>
             <div>
               <span className="text-primary-foreground font-display font-semibold text-sm block">
-                JUET Guna Assistant
+                JUET HelpDesk
               </span>
               <span className="text-primary-foreground/70 text-xs">
                 Ask me anything
