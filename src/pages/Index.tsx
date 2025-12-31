@@ -1,8 +1,11 @@
 import { FloatingWidget } from "@/components/FloatingWidget";
 import { WidgetChat } from "@/components/WidgetChat";
 import { Helmet } from "react-helmet-async";
+import { useChat } from "@/hooks/useChat";
 
 const Index = () => {
+  const chatState = useChat();
+
   return (
     <>
       <Helmet>
@@ -14,8 +17,8 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <FloatingWidget>
-          <WidgetChat />
+        <FloatingWidget onRefresh={chatState.clearChat}>
+          <WidgetChat chatState={chatState} />
         </FloatingWidget>
       </div>
     </>

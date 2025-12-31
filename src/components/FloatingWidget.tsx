@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { MessageCircle, X, RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface FloatingWidgetProps {
   children: React.ReactNode;
+  onRefresh?: () => void;
 }
 
-export const FloatingWidget = ({ children }: FloatingWidgetProps) => {
+export const FloatingWidget = ({ children, onRefresh }: FloatingWidgetProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -41,13 +42,24 @@ export const FloatingWidget = ({ children }: FloatingWidgetProps) => {
               </span>
             </div>
           </div>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors"
-            aria-label="Close chat"
-          >
-            <X className="w-5 h-5 text-primary-foreground" />
-          </button>
+          <div className="flex items-center gap-1">
+            {onRefresh && (
+              <button
+                onClick={onRefresh}
+                className="p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors"
+                aria-label="Refresh chat"
+              >
+                <RotateCcw className="w-4 h-4 text-primary-foreground" />
+              </button>
+            )}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-2 rounded-lg hover:bg-primary-foreground/10 transition-colors"
+              aria-label="Close chat"
+            >
+              <X className="w-5 h-5 text-primary-foreground" />
+            </button>
+          </div>
         </div>
 
         {/* Chat Content */}
