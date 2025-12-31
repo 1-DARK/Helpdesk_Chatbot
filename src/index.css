@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,6 @@
   :root {
     /* JUET Academic Theme - Deep Navy & Gold */
     --background: 220 25% 97%;
-    --foreground: 220 30% 12%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 30% 12%;
@@ -43,8 +42,16 @@
     /* Custom tokens */
     --chat-user: 220 60% 25%;
     --chat-bot: 220 25% 95%;
-    --gradient-primary: linear-gradient(135deg, hsl(220, 60%, 25%), hsl(220, 50%, 35%));
-    --gradient-gold: linear-gradient(135deg, hsl(40, 85%, 55%), hsl(35, 80%, 50%));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(220, 60%, 25%),
+      hsl(220, 50%, 35%)
+    );
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(40, 85%, 55%),
+      hsl(35, 80%, 50%)
+    );
     --shadow-elegant: 0 4px 24px -4px hsl(220 60% 25% / 0.15);
     --shadow-chat: 0 2px 12px -2px hsl(220 60% 25% / 0.1);
 
@@ -108,11 +115,16 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 }
 
@@ -167,7 +179,9 @@
 }
 
 @keyframes typing {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     opacity: 0.3;
   }
   30% {
@@ -207,7 +221,8 @@
   @apply mb-2 last:mb-0;
 }
 
-.prose-chat ul, .prose-chat ol {
+.prose-chat ul,
+.prose-chat ol {
   @apply my-2 pl-4 space-y-1;
 }
 

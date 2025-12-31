@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Bot, User } from "lucide-react";
+import { Bot, MessageCircle, User } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
 interface ChatMessageProps {
@@ -8,7 +8,11 @@ interface ChatMessageProps {
   isStreaming?: boolean;
 }
 
-export const ChatMessage = ({ role, content, isStreaming }: ChatMessageProps) => {
+export const ChatMessage = ({
+  role,
+  content,
+  isStreaming,
+}: ChatMessageProps) => {
   const isUser = role === "user";
 
   return (
@@ -26,7 +30,11 @@ export const ChatMessage = ({ role, content, isStreaming }: ChatMessageProps) =>
             : "bg-card border border-border text-primary"
         )}
       >
-        {isUser ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
+        {isUser ? (
+          <User className="w-4 h-4" />
+        ) : (
+          <MessageCircle className="w-4 h-4" />
+        )}
       </div>
 
       <div
@@ -37,19 +45,32 @@ export const ChatMessage = ({ role, content, isStreaming }: ChatMessageProps) =>
             : "bg-card border border-border text-card-foreground rounded-tl-sm"
         )}
       >
-        <div className={cn("prose-chat text-sm", isUser && "text-primary-foreground")}>
+        <div
+          className={cn(
+            "prose-chat text-sm",
+            isUser && "text-primary-foreground"
+          )}
+        >
           <ReactMarkdown
             components={{
               p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
-              ul: ({ children }) => <ul className="my-2 pl-4 space-y-1 list-disc">{children}</ul>,
-              ol: ({ children }) => <ol className="my-2 pl-4 space-y-1 list-decimal">{children}</ol>,
+              ul: ({ children }) => (
+                <ul className="my-2 pl-4 space-y-1 list-disc">{children}</ul>
+              ),
+              ol: ({ children }) => (
+                <ol className="my-2 pl-4 space-y-1 list-decimal">{children}</ol>
+              ),
               li: ({ children }) => <li>{children}</li>,
-              strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+              strong: ({ children }) => (
+                <strong className="font-semibold">{children}</strong>
+              ),
               code: ({ children }) => (
-                <code className={cn(
-                  "px-1.5 py-0.5 rounded text-sm font-mono",
-                  isUser ? "bg-primary-foreground/20" : "bg-muted"
-                )}>
+                <code
+                  className={cn(
+                    "px-1.5 py-0.5 rounded text-sm font-mono",
+                    isUser ? "bg-primary-foreground/20" : "bg-muted"
+                  )}
+                >
                   {children}
                 </code>
               ),
@@ -60,9 +81,18 @@ export const ChatMessage = ({ role, content, isStreaming }: ChatMessageProps) =>
         </div>
         {isStreaming && (
           <span className="inline-flex gap-1 ml-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing" style={{ animationDelay: "0ms" }} />
-            <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing" style={{ animationDelay: "150ms" }} />
-            <span className="w-1.5 h-1.5 rounded-full bg-current animate-typing" style={{ animationDelay: "300ms" }} />
+            <span
+              className="w-1.5 h-1.5 rounded-full bg-current animate-typing"
+              style={{ animationDelay: "0ms" }}
+            />
+            <span
+              className="w-1.5 h-1.5 rounded-full bg-current animate-typing"
+              style={{ animationDelay: "150ms" }}
+            />
+            <span
+              className="w-1.5 h-1.5 rounded-full bg-current animate-typing"
+              style={{ animationDelay: "300ms" }}
+            />
           </span>
         )}
       </div>
