@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MessageCircle, X, RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
+import helpdeskAvatar from "@/assets/helpdesk-avatar.png";
 
 interface FloatingWidgetProps {
   children: React.ReactNode;
@@ -13,11 +14,10 @@ export const FloatingWidget = ({ children, onRefresh }: FloatingWidgetProps) => 
 
   return (
     <div className="fixed bottom-4 right-4 z-50 font-sans">
-      {/* Welcome Message Bubble */}
-      {/* Welcome Message Bubble - Left side */}
+      {/* Welcome Message Bubble - Left side with Avatar */}
       {!isOpen && showWelcome && (
-        <div className="absolute bottom-2 right-16 mr-3 animate-fade-in">
-          <div className="relative bg-background rounded-xl shadow-lg border border-border px-4 py-3 max-w-[240px]">
+        <div className="absolute bottom-0 right-16 mr-3 flex items-center gap-2 animate-fade-in">
+          <div className="relative bg-background rounded-xl shadow-lg border border-border px-4 py-3 max-w-[220px]">
             <button
               onClick={() => setShowWelcome(false)}
               className="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-destructive text-destructive-foreground flex items-center justify-center hover:bg-destructive/90 transition-colors"
@@ -29,8 +29,14 @@ export const FloatingWidget = ({ children, onRefresh }: FloatingWidgetProps) => 
               Hey! I am JUET HelpDesk Your Admission Assistant.
             </p>
           </div>
-          {/* Arrow pointing to button */}
-          <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-0 h-0 border-t-8 border-b-8 border-l-8 border-transparent border-l-background" />
+          {/* Avatar */}
+          <div className="w-14 h-14 rounded-full border-[3px] border-primary overflow-hidden shadow-lg flex-shrink-0">
+            <img 
+              src={helpdeskAvatar} 
+              alt="JUET HelpDesk Assistant" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       )}
 
