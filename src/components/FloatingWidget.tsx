@@ -97,16 +97,14 @@ export const FloatingWidget = ({
           "flex items-center justify-center",
           "transition-all duration-300 ease-out",
           "hover:scale-110 active:scale-95",
-          isOpen
-            ? "bg-muted text-muted-foreground"
-            : "gradient-primary text-primary-foreground"
+          isOpen ? "bg-muted text-muted-foreground" : "text-primary-foreground"
         )}
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         {isOpen ? (
           <X className="w-6 h-6" />
         ) : (
-          <MessageCircle className="w-6 h-6" />
+          <img src="/image.png" alt="Open chat" className="w-18 h-15" />
         )}
       </button>
 
