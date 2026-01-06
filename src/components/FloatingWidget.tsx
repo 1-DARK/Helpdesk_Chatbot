@@ -14,9 +14,10 @@ export const FloatingWidget = ({ children, onRefresh }: FloatingWidgetProps) => 
   return (
     <div className="fixed bottom-4 right-4 z-50 font-sans">
       {/* Welcome Message Bubble */}
+      {/* Welcome Message Bubble - Left side */}
       {!isOpen && showWelcome && (
-        <div className="absolute bottom-16 right-0 mb-2 animate-fade-in">
-          <div className="relative bg-background rounded-xl shadow-lg border border-border px-4 py-3 max-w-[260px]">
+        <div className="absolute bottom-2 right-16 mr-3 animate-fade-in">
+          <div className="relative bg-background rounded-xl shadow-lg border border-border px-4 py-3 max-w-[240px]">
             <button
               onClick={() => setShowWelcome(false)}
               className="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-destructive text-destructive-foreground flex items-center justify-center hover:bg-destructive/90 transition-colors"
@@ -29,7 +30,7 @@ export const FloatingWidget = ({ children, onRefresh }: FloatingWidgetProps) => 
             </p>
           </div>
           {/* Arrow pointing to button */}
-          <div className="absolute -bottom-2 right-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-background" />
+          <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-0 h-0 border-t-8 border-b-8 border-l-8 border-transparent border-l-background" />
         </div>
       )}
 
