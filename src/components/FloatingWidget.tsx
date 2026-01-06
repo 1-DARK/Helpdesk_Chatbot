@@ -7,14 +7,15 @@ interface FloatingWidgetProps {
   onRefresh?: () => void;
 }
 
-export const FloatingWidget = ({ children, onRefresh }: FloatingWidgetProps) => {
+export const FloatingWidget = ({
+  children,
+  onRefresh,
+}: FloatingWidgetProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
 
   return (
     <div className="fixed bottom-4 right-4 z-50 font-sans">
-      {/* Welcome Message Bubble */}
-      {/* Welcome Message Bubble - Left side */}
       {!isOpen && showWelcome && (
         <div className="absolute bottom-2 right-16 mr-3 animate-fade-in">
           <div className="relative bg-background rounded-xl shadow-lg border border-border px-4 py-3 max-w-[240px]">
