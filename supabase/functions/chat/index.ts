@@ -345,15 +345,37 @@ A: No, candidates cannot take transfers within Jaypee Universities.
 === DOCUMENTS REQUIRED ===
 
 Documents Required for UG/PG Program:
-| Document | Photocopies | Original |
-| 10th Marksheet | Yes | - |
-| 12th Marksheet | Yes | Verified with original |
-| UG Degree Marksheet (for PG courses only) | Yes | - |
-| Aadhaar Card | Yes | No |
-| Migration Certificate | No | Yes |
-| Character Certificate | No | Yes |
-| Medical Certificate | No | Yes |
-| Antiragging | No | Yes |
+10th Marksheet
+– Photocopy: Required
+– Original: Not required
+
+12th Marksheet
+– Photocopy: Required
+– Original: Verified with original
+
+UG Degree Marksheet (for PG courses only)
+– Photocopy: Required
+– Original: Not required
+
+Aadhaar Card
+– Photocopy: Required
+– Original: Not required
+
+Migration Certificate
+– Photocopy: Not required
+– Original: Required
+
+Character Certificate
+– Photocopy: Not required
+– Original: Required
+
+Medical Certificate
+– Photocopy: Not required
+– Original: Required
+
+Anti-Ragging Certificate
+– Photocopy: Not required
+– Original: Required
 
 === CSE STREAMS DETAILED FAQ ===
 
