@@ -39,7 +39,7 @@ export const ChatMessage = ({
 
       <div
         className={cn(
-          "max-w-[80%] rounded-2xl px-4 py-3 shadow-chat",
+          "max-w-[100%] rounded-2xl px-4 py-3 shadow-chat", // width
           isUser
             ? "gradient-primary text-primary-foreground rounded-tr-sm"
             : "bg-card border border-border text-card-foreground rounded-tl-sm"
