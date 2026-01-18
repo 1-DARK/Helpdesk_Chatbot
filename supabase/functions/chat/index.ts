@@ -6,6 +6,184 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
+// ============ RATE LIMITING (In-Memory) ============
+// Limits: 20 requests per minute per IP
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
+const MAX_REQUESTS_PER_WINDOW = 20;
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+
+function isRateLimited(clientId: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(clientId);
+  
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(clientId, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  
+  if (record.count >= MAX_REQUESTS_PER_WINDOW) {
+    return true;
+  }
+  
+  record.count++;
+  return false;
+}
+
+// Clean up old rate limit entries every 5 minutes
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, value] of rateLimitMap.entries()) {
+    if (now > value.resetTime) {
+      rateLimitMap.delete(key);
+    }
+  }
+}, 5 * 60 * 1000);
+
+// ============ RESPONSE CACHING ============
+// Cache common FAQ responses for 1 hour
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+const responseCache = new Map<string, { response: string; expiry: number }>();
+
+// Common question patterns and their cached responses
+const CACHED_RESPONSES: Record<string, string> = {
+  "fees": `**Fee Structure at JUET Guna**
+
+For detailed fee structure of different programmes offered by the university, please visit: https://www.juet.ac.in/jaypee/admission.php
+
+**Additional Information:**
+- No capitation fees or management quota
+- 30-35% tuition fee concession for defence quota students
+- No sibling discount available
+- Education loan documents provided by the university
+
+For specific programme fees, contact the Admission Cell at 1800-121-884444.`,
+
+  "location": `**JUET Guna Location**
+
+JUET Guna is located at **Raghogarh in Guna district of Madhya Pradesh**.
+
+**Connectivity:**
+- Well connected by Train and Bus
+- Located on Mumbai - Agra National Highway
+- Nearest airport: Bhopal
+
+**Address:** AB Road, Raghogarh, Guna, Madhya Pradesh - 473226`,
+
+  "placements": `**Placements at JUET Guna**
+
+JUET has excellent placement records with leading companies visiting the campus.
+
+**Key Highlights:**
+- Strong industry connections
+- Pre-placement training and workshops
+- Internship opportunities
+
+For detailed placement statistics and recruiter information, please visit the official JUET website or contact the Training & Placement Cell.
+
+**Contact:** 1800-121-884444`,
+
+  "hostel": `**Hostel Facilities at JUET Guna**
+
+**Boys Hostel:**
+- 21 blocks with capacity for 1830 students
+- Rooms equipped with beds, mattresses, study tables, almirahs, wardrobes
+- Lights, fans, Internet connectivity
+- Centralized air cooling
+
+**Girls Hostel:**
+- Capacity for around 425 students
+- Separate sporting & messing facility
+- Same room amenities as boys hostel
+
+All hostels have 24/7 security and WiFi connectivity.`,
+
+  "admission": `**Admission at JUET Guna**
+
+**B.Tech Admission:**
+- Through JEE Main score/All India Rank OR
+- Merit basis on 10+2 marks
+
+**M.Tech Admission:**
+- GATE qualified (exempted from entrance test) OR
+- PGET (Post Graduate Entrance Test) at JUET
+
+**PhD Admission:**
+- PhD entrance test + interview
+- NET/SLET/GATE qualified exempted from written test
+
+**More Info:** https://www.juet.ac.in/jaypee/admission.php
+**Helpline:** 1800-121-884444`,
+
+  "ranking": `**JUET Guna Rankings & Recognition**
+
+- **NAAC:** Grade A+ (2023)
+- **Career 360:** AAA+ Rating (2023 & 2025)
+- **THE World University Rankings 2025:** 501-600 band worldwide
+- **UGC Approved:** Yes, under section 2(f) of UGC Act, 1956
+- Member of Association of Universities
+
+JUET is the first state private university in Madhya Pradesh, established in 2010.`,
+
+  "cse": `**CSE Programs at JUET Guna**
+
+**Available Specializations:**
+- Computer Science and Engineering (Core)
+- CSE (Artificial Intelligence & Machine Learning)
+- CSE (Data Science)
+- CSE (Cyber Security)
+
+**Duration:** 4 years (8 semesters)
+
+**Core Subjects:** Programming, Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks
+
+**Career Prospects:** Software Engineer, Data Scientist, AI/ML Engineer, Cyber Security Analyst, and more.
+
+For detailed comparison of CSE streams, ask me about specific specializations!`
+};
+
+function getCacheKey(message: string): string | null {
+  const lower = message.toLowerCase().trim();
+  
+  if (lower.includes("fee") || lower.includes("cost") || lower.includes("price") || lower.includes("payment")) {
+    return "fees";
+  }
+  if (lower.includes("location") || lower.includes("where") || lower.includes("address") || lower.includes("situated")) {
+    return "location";
+  }
+  if (lower.includes("placement") || lower.includes("job") || lower.includes("recruit") || lower.includes("package")) {
+    return "placements";
+  }
+  if (lower.includes("hostel") || lower.includes("accommodation") || lower.includes("room") || lower.includes("stay")) {
+    return "hostel";
+  }
+  if (lower.includes("admission") || lower.includes("apply") || lower.includes("enroll") || lower.includes("join")) {
+    return "admission";
+  }
+  if (lower.includes("ranking") || lower.includes("naac") || lower.includes("ugc") || lower.includes("recognition") || lower.includes("accredit")) {
+    return "ranking";
+  }
+  if ((lower.includes("cse") || lower.includes("computer science")) && !lower.includes("ai") && !lower.includes("ml") && !lower.includes("data") && !lower.includes("cyber")) {
+    return "cse";
+  }
+  
+  return null;
+}
+
+function createSSEResponse(text: string): ReadableStream {
+  const encoder = new TextEncoder();
+  return new ReadableStream({
+    start(controller) {
+      // Send the cached response as a single SSE event
+      const data = JSON.stringify({
+        choices: [{ delta: { content: text } }]
+      });
+      controller.enqueue(encoder.encode(`data: ${data}\n\n`));
+      controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+      controller.close();
+    }
+  });
+}
+
 const JUET_KNOWLEDGE = `
 JUET GUNA COMPREHENSIVE FAQ DATABASE
 
@@ -372,12 +550,48 @@ serve(async (req) => {
   }
 
   try {
+    // Get client identifier for rate limiting (IP or fallback)
+    const clientId = req.headers.get("x-forwarded-for") || 
+                     req.headers.get("x-real-ip") || 
+                     "anonymous";
+    
+    // Check rate limit
+    if (isRateLimited(clientId)) {
+      console.log(`Rate limited client: ${clientId}`);
+      return new Response(
+        JSON.stringify({
+          error: "Too many requests. Please wait a moment before trying again.",
+        }),
+        {
+          status: 429,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
     const { messages } = await req.json();
+    
+    // Get the last user message for cache lookup
+    const lastUserMessage = messages
+      .filter((m: { role: string }) => m.role === "user")
+      .pop()?.content || "";
+    
+    // Check if we have a cached response for common questions
+    const cacheKey = getCacheKey(lastUserMessage);
+    if (cacheKey && CACHED_RESPONSES[cacheKey]) {
+      console.log(`Cache hit for: ${cacheKey}`);
+      return new Response(createSSEResponse(CACHED_RESPONSES[cacheKey]), {
+        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+      });
+    }
+
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
 
     if (!LOVABLE_API_KEY) {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
+
+    console.log(`AI request from: ${clientId}, message: ${lastUserMessage.substring(0, 50)}...`);
 
     const response = await fetch(
       "https://ai.gateway.lovable.dev/v1/chat/completions",
@@ -399,7 +613,7 @@ serve(async (req) => {
       if (response.status === 429) {
         return new Response(
           JSON.stringify({
-            error: "Rate limit exceeded. Please try again in a moment.",
+            error: "Service is busy. Please try again in a moment.",
           }),
           {
             status: 429,
