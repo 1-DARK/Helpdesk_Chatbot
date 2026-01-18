@@ -7,44 +7,335 @@ const corsHeaders = {
 };
 
 const JUET_KNOWLEDGE = `
-Comprehensive JUET Guna Data
-Collected from https://www.juet.ac.in/ as of December 29, 2025. This content combines admissions, placements, branches, and announcements for easy chatbot integration.
+JUET GUNA COMPREHENSIVE FAQ DATABASE
 
-Admissions Information
-Admissions for 2025 are merit-based. B.Tech admissions are primarily through JEE Main, M.Tech through GATE or JUET PGET, M.Sc through qualifying exams or CUET PG, and PhD through JUET entrance test and interview. Applications open from March 7, 2025, in both online and offline modes. The toll-free helpline number is 1800-121-884444.
+=== GENERAL INFORMATION ===
 
-B.Tech is a 4-year program with branches including Computer Science, Electronics and Communication, Mechanical, Civil, Chemical, and related specializations. Eligibility requires passing or appearing in 10+2 between 2023 and 2025 with Physics and Mathematics as compulsory subjects and one additional subject such as Chemistry, Computer Science, Electronics, or IT. A minimum of 60 percent aggregate is required, with 55 percent for SC and ST candidates. A gap-year affidavit is mandatory if applicable. For Civil, Chemical, and Mechanical Engineering, Chemistry is compulsory. Admission is based on JEE Main 2025 All India Rank or, alternatively, 10+2 marks through a separate application. Applications open on March 7, last date is June 5, and counselling for Round 1 is scheduled for June 17–18 at JIIT Noida. The application fee is ₹1,200. Annual fees include ₹1,96,000 tuition and ₹35,000 development fee, totaling ₹2,31,000. A one-time refundable caution deposit of ₹20,000 and a non-refundable counselling fee of ₹25,000 are applicable. Scholarships include a 30 percent tuition waiver for wards of armed and paramilitary forces, with an additional 5 percent for war widows or wards of martyrs. Ten percent seats are reserved for armed forces wards, and SC, ST, and Kashmiri Migrant reservations follow Government of India norms.
+Q: Where is Jaypee University of Engineering and Technology (JUET) Guna located?
+A: JUET Guna is located at Raghogarh in Guna district of Madhya Pradesh. It is well connected with Train, Bus through Mumbai - Agra National Highway and nearest airport at Bhopal.
 
-M.Tech is a 2-year program. Eligibility requires a BE or B.Tech degree with at least 60 percent marks or 6.0 CGPA in a relevant discipline. Admission is through GATE, which exempts the entrance test, or JUET PGET. Applications open on March 7 and close on June 5. The application fee is ₹1,000. Annual fees include ₹1,08,000 tuition and ₹19,000 development fee, totaling ₹1,27,000, along with a ₹5,000 caution deposit and ₹15,000 counselling fee. Scholarship and reservation rules are the same as B.Tech.
+Q: Is JUET Guna private or government?
+A: Jaypee University of Engineering & Technology (JUET), Guna is the first state private university in Madhya Pradesh. It has been established vide Government of Madhya Pradesh gazette extra ordinary No.3 of 2010 dated 29th April 2010 as a private university in the State of Madhya Pradesh under the provisions of MP Niji Vishwavidyalaya Adhiniyam 2007.
 
-M.Sc is a 2-year program offered in Physics, Mathematics, and Chemistry. Eligibility requires a B.Sc. (Honors) or B.Sc. degree with 55 percent marks, or 50 percent for SC and ST candidates, in science subjects. Admission is based on qualifying exam marks or CUET PG. Applications run from March 7 to June 5. The application fee is ₹500. Annual fees include ₹47,000 tuition and ₹8,000 development fee, totaling ₹55,000, plus a ₹5,000 caution deposit and ₹10,000 counselling fee. Scholarship and reservation policies remain the same.
+Q: What are the University Rankings and Recognition?
+A: JUET is accredited with Grade A+ by NAAC in 2023, rated AAA+ in 2023 & 2025 by Career 360 and ranked 501-600 band worldwide in the Times Higher Education World University Rankings 2025.
 
-PhD programs require a postgraduate degree with at least 55 percent marks, or 50 percent for SC and ST candidates. Admission is through the JUET PhD entrance test and interview, with NET, SLET, or GATE-qualified candidates exempted from the written test. Applications are open from March 7 to June 5 with a fee of ₹1,000. Annual fees include ₹49,000 tuition and ₹9,000 development fee, totaling ₹58,000, along with a ₹5,000 caution deposit. Scholarship and reservation rules follow the same structure as other programs.
+Q: Is JUET Guna UGC approved?
+A: Yes, JUET Guna is UGC approved. The university has been notified by the UGC under section 2(f) of the UGC Act, 1956 and is a member of Association of Universities.
 
-The application process for all programs is available online through the JUET website, where applicants must upload photographs and signatures. Offline applications can be submitted by form along with demand draft or cash at the Admission Cell, JUET Guna, AB Road, Raghogarh, Guna, Madhya Pradesh, 473226. NRI applicants pay a separate fee of ₹1,500, are selected based on 10+2 merit, and must submit a sponsorship letter. Lateral entry to B.Tech second year requires a minimum of 45 percent in a diploma or first year of B.Tech, with 40 percent for SC and ST candidates. All admissions are provisional and subject to verification. An anti-ragging affidavit is mandatory. Hostel charges per semester are ₹80,000 for non-NRI students, including food and laundry, and USD 1,100 for NRI students.
+Q: Is the Degree awarded by JUET recognized in India and Abroad?
+A: Yes.
 
-Placements Information
-JUET Guna reports a placement rate exceeding 95 percent, with more than 650 companies visiting the campus annually. The placement season begins in July. Mandatory internships are part of the B.Tech curriculum after the sixth semester. Training includes aptitude development, soft skills, resume building, and professional workshops.
+Q: What is unique about JUET, Guna?
+A: The unique thing about JUET is that the number of students is very less compared to other private colleges so there is not much rush. A mentor is assigned to each student for assisting and monitoring their all round development. It also provides better placement than other private universities.
 
-Over the last five years from 2016 to 2024, 1,435 students were eligible for placements, out of which 1,322 were placed, resulting in an absolute placement rate of 96 percent. A total of 2,229 offers were made, equivalent to 163 percent of participating students. The highest package offered was ₹44.14 LPA, with an average package of ₹6.5 LPA and a median package of ₹6 LPA. Major recruiters include Amazon, Google, Microsoft, TCS, Infosys, Accenture, Capgemini, IBM, Goldman Sachs, Reliance Jio, L&T Infotech, Wipro, and ZS Associates.
+=== PROGRAMMES OFFERED ===
 
-For the 2025 batch, 318 students were eligible and 277 were placed, achieving a 95 percent placement rate. The highest package was ₹20 LPA, with an average of ₹6.19 LPA and a median of ₹6 LPA. The 2024 batch saw 348 eligible students, 295 placed, a 94 percent placement rate, a highest package of ₹30 LPA, an average of ₹6.56 LPA, and a median of ₹6 LPA. In earlier years, the highest packages reached ₹44.14 LPA in 2022 and 2023, ₹41 LPA in 2020, and ₹35 LPA in 2021.
+Diploma Programs:
+- Civil Engineering
+- Mechanical Engineering
 
-Branch-wise placement data for the 2021–25 batch shows Computer Science Engineering with 302 eligible students, 277 participating, 322 offers, and 263 students placed, resulting in a 95 percent absolute placement rate. Electronics and Communication Engineering had an 80 percent placement rate. Civil, Chemical, and Mechanical Engineering recorded 100 percent placement. Similar trends were observed from 2020 to 2024, with Computer Science consistently between 93 and 100 percent and other branches at 100 percent. No official branch-wise salary ranges are published, though Computer Science dominates higher packages.
+Undergraduate (B.Tech.) Programs:
+- BBA
+- Chemical Engineering
+- Civil Engineering
+- Computer Science and Engineering
+- Computer Science and Engineering (AI & ML)
+- Computer Science and Engineering (Data Science)
+- Computer Science and Engineering (Cyber Security)
+- Electronics & Communication Engineering
+- Electronics Engineering (VLSI Design & Technology)
+- Mechanical Engineering
+- Mechanical & Mechatronics Engineering (Additive Manufacturing)
 
-Branch and Department Information
-The Computer Science and Engineering department offers B.Tech, B.Tech with specializations in AI and ML or Data Science, M.Tech, and PhD programs. The curriculum emphasizes artificial intelligence, machine learning, data science, software development, and networking. Laboratories include database systems, data mining, and UI and UX. The department has over 20 faculty members, including senior professors with extensive experience. Graduates are placed in leading multinational companies, particularly in software and AI roles, with a placement rate above 95 percent.
+Postgraduate (M.Sc.) Programs:
+- Chemistry
+- Mathematics
+- Physics
 
-The Electronics and Communication Engineering department offers B.Tech, B.Tech with VLSI Design specialization, M.Tech, and PhD programs. The curriculum focuses on VLSI, embedded systems, signal processing, and IoT, supported by advanced laboratories. Research areas include wireless communication and neural networks. The department has over 12 faculty members and maintains placement rates between 80 and 100 percent, with opportunities in semiconductor and telecom industries.
+Postgraduate (M.Tech.) Programs:
+- Chemical Engineering
+- Civil Engineering (Environmental Engineering)
+- Civil Engineering (Construction Management)
+- Civil Engineering (Structural Engineering)
+- Computer Science and Engineering
+- Electronics & Communication Engineering
+- Mechanical Engineering (Manufacturing Technology)
 
-The Mechanical Engineering department offers B.Tech, B.Tech with Mechatronics and Additive Manufacturing, M.Tech in Manufacturing Technology, Diploma, and PhD programs. The curriculum covers design, manufacturing, renewable energy, and CAD and CAM, supported by extensive workshops and laboratories. Research areas include additive manufacturing and vibration analysis. The department has over 14 faculty members and reports 100 percent placement, with internships in automotive and energy sectors.
+Ph.D. Programs:
+- Chemical Engineering
+- Civil Engineering
+- Computer Science and Engineering
+- Electronics & Communication Engineering
+- Mechanical Engineering
+- Chemistry
+- Humanities & Social Sciences
+- Physics
+- Mathematics
 
-The Civil Engineering department offers B.Tech, M.Tech in Structural, Construction, and Environmental Engineering, Diploma, and PhD programs. The curriculum emphasizes sustainable design, geotechnical engineering, hydraulics, and surveying, supported by specialized laboratories. Research focuses on water resources and rock mechanics. The department has over seven faculty members and maintains a 100 percent placement rate, mainly in infrastructure and construction sectors.
+=== ADMISSION PROCEDURES ===
 
-The Chemical Engineering department offers B.Tech, M.Tech, and PhD programs. The curriculum includes process design, mass and heat transfer, and reaction engineering, supported by dedicated laboratories. Research areas include photocatalysis and membrane processes. The department has experienced faculty and reports a 100 percent placement rate, with graduates working in oil, gas, fertilizer, and consumer goods industries.
+Q: What is the admission procedure for BBA programme?
+A: Candidate should have passed or appeared in 10+2 examination or equivalent from a recognized educational board.
 
-Latest Announcements as of December 2025
-PhD admissions for the Even Semester 2025–26 are open, with details available in the official brochure. Registration and fee intimation for Even Semester 2026 are ongoing, and the academic calendar for the same has been released. Internship opportunities for the 2026 batch have been announced, while results for Odd Semester 2025 are pending. Hostel allotment for boys for Odd Semester 2025 has been released, supplementary examination dates for Even Semester 2025 are available, and PhD and Odd Semester 2025 registrations are closed. For full PDF documents such as academic calendars and fee structures, users should be directed to the announcements section on the JUET website.
+Q: What is the admission procedure for B.Tech. programme?
+A: The admission process is either on the basis of merit or scores in 10+2 or through JEE Main score/All India Rank.
+
+Q: Can I get admission in B.Tech. without appearing for JEE Main?
+A: Yes, students can get admission in B.Tech on the basis of merit in 12th.
+
+Q: What is the admission procedure for B.Tech. Lateral Entry programme?
+A: Passed Diploma examination / B.Tech. 1st Year / BSc for admission through B.Tech. Lateral entry in 2nd year in the relevant branch.
+
+Q: What is the admission procedure for M.Tech. programme?
+A: Candidates should have passed BE/BTech examination with 60% marks or 6.0 CGPA on 10 point scale in the relevant discipline. Admission will be based on the PGET (Post Graduate Entrance Test) conducted at JUET, Guna. GATE qualified candidates are exempted from appearing in the PGET.
+
+Q: What is PGET at JUET Guna?
+A: PGET is an acronym for Post Graduate Entrance Test conducted by Jaypee University of Engineering and Technology for M.Tech. admissions.
+
+Q: What is the admission procedure for Ph.D. programme?
+A: PG degree with 55% (50% for SC/ST) marks from a recognized University/Institution in the relevant subject. Admission will be based on the PhD entrance test followed by interview conducted at JUET, Guna. NET/SLET/GATE qualified candidates are exempted from appearing in the PhD Entrance test but have to appear in the interview.
+
+Q: How can I get more information about Admissions?
+A: To get detailed information about admission procedure, fee structure etc., please visit admission page of University website https://www.juet.ac.in/jaypee/admission.php
+
+=== DEFENCE QUOTA & FEES ===
+
+Q: Does the University have a defence quota in admission?
+A: Yes. 10% seats are reserved for B.Tech. programmes for the wards of serving and retired Armed & Paramilitary forces.
+
+Q: Does JUET provide a concession for students admitted under defence quota?
+A: Yes. 35% concession in Tuition fee of B.Tech. programme for the wards or war widows and personnel killed in action and 30% concession in Tuition Fee for the wards of serving and retired Armed and Paramilitary forces personnel.
+
+Q: Is there any Capitation fees/Management quota for admission?
+A: No. There is no Capitation fees/Management quota for admission.
+
+Q: What is the fee structure for different programs in JUET?
+A: For fee structure of different programmes offered by the university, visit website of JUET https://www.juet.ac.in/jaypee/admission.php
+
+Q: Does JUET have a tie up with banks for Education Loan facility?
+A: No, however, required documents needed by banks for the education loan are provided by the University to the students.
+
+Q: Is there any fee discount for sibling?
+A: No.
+
+Q: Is there any NRI Quota?
+A: Yes, there is NRI/NRI Sponsored category.
+
+=== INFRASTRUCTURE & FACILITIES ===
+
+Q: What is the Infrastructure available at JUET?
+A: JUET has a state-of-the-art fully networked and environment conditioned infrastructure having Smart lecture theatres, Class rooms, well equipped laboratories and IT infrastructure with Wifi facility and a Multipurpose hall with seating capacity approx. 2000. The Library or Learning Resource Centre (LRC) is well-stocked with Indian and International books, E-Journals, printed Journals/magazines covering all areas of Engineering, Management and Science.
+
+Q: Does JUET Guna provide Hostel facilities?
+A: Yes, the university has separate hostel facilities for boys and girls. Presently, there are 21 blocks of boy's hostels having the capacity to accommodate 1830 students. The girls hostel is having the capacity to accommodate around 425 inmates with its own sporting & messing facility. The rooms are equipped with beds, mattresses, study tables, almirahs, wardrobes, lights, fans and Internet connectivity and a centralized air cooling.
+
+Q: What Sports facilities are available?
+A: The university offers state-of-the-art sports facilities for Cricket, Football, Basketball, Volleyball, badminton etc. promoting physical fitness, teamwork, and overall well-being.
+
+Q: How is the JUET campus equipped?
+A: The JUET campus is equipped with cutting-edge technology, comfortable hostels, and dynamic spaces for academics, sports, and recreation. Additionally, there are eco-friendly initiatives for sustainable living.
+
+Q: What is the library like at JUET?
+A: The university library commonly known as Learning Resource Center (LRC) have an extensive collection of textbooks, journals, and digital resources to support academic pursuits.
+
+Q: Is laptop provided by the University?
+A: Laptop is not provided by the University. However, students are advised to bring their own laptops.
+
+=== SCHOLARSHIPS ===
+
+Q: Are scholarships offered at JUET Guna?
+A: Yes, scholarships are offered at JUET Guna. Some of them are:
+- Post Matric Scholarships for SC/ST and OBC students of Madhya Pradesh
+- Chief Minister Meritorious Scholarship Scheme for the Students of Madhya Pradesh
+- Scholarship for minority category students
+- Scholarship provided by other state students by their state government
+- Bihar Student Credit Card Scheme for the Students of Bihar
+- Corporate Scholarship
+
+=== CAMPUS LIFE & COLLABORATIONS ===
+
+Q: What is the campus life like at JUET Guna?
+A: Life at JUET, Guna is a balanced mix of academics, exploration, and community, offering ample opportunities for students to engage in learning, leadership, and social activities.
+
+Q: Does JUET Guna have collaborations with other universities/institutions?
+A: Yes, JUET Guna has various collaborations. The university has collaborated with other universities/institutions such as the University of Florida, IOWA State University of Science & Technology - USA, ICT Academy-IIITDM Jabalpur, JIIT Noida, NIT Uttarakhand, VLSI Society of India (VSI), JILIT Ghaziabad, JPVL New Delhi, KFCL.
+
+Q: Is inter college transfer permissible between Jaypee Universities?
+A: No, candidates cannot take transfers within Jaypee Universities.
+
+=== DOCUMENTS REQUIRED ===
+
+Documents Required for UG/PG Program:
+| Document | Photocopies | Original |
+| 10th Marksheet | Yes | - |
+| 12th Marksheet | Yes | Verified with original |
+| UG Degree Marksheet (for PG courses only) | Yes | - |
+| Aadhaar Card | Yes | No |
+| Migration Certificate | No | Yes |
+| Character Certificate | No | Yes |
+| Medical Certificate | No | Yes |
+| Antiragging | No | Yes |
+
+=== CSE STREAMS DETAILED FAQ ===
+
+Q: What is Computer Science & Engineering (CSE)?
+A: CSE is a core engineering discipline that focuses on computer programming, software development, computer systems, algorithms, and computational theory.
+
+Q: What is the duration of the CSE programs?
+A: All CSE programs are typically 4-year undergraduate degree programs, divided into 8 semesters.
+
+Q: Are the core subjects common in all CSE streams?
+A: Yes. Core subjects such as Programming, Data Structures, Algorithms, Database Management Systems, Operating Systems, and Computer Networks are common, with specialization-specific subjects added later.
+
+Q: What are the eligibility criteria for CSE admission?
+A: Generally, candidates must have completed 10+2 with Physics, Mathematics, and one additional science subject, meeting the minimum percentage as prescribed by the university.
+
+Q: What are the career prospects after CSE programs?
+A: Graduates can work in IT companies, startups, research organizations, government sectors, or pursue higher studies like M.Tech, MBA, MS, or Ph.D.
+
+=== CSE (CORE) ===
+
+Q: Who should choose CSE (Core)?
+A: Students interested in software development, system design, programming, and core computer science concepts should opt for CSE (Core).
+
+Q: What subjects are covered in CSE (Core)?
+A: Programming Languages (C, C++, Java, Python), Data Structures & Algorithms, Operating Systems, Computer Networks, Software Engineering, Database Management Systems.
+
+Q: What job roles are available for CSE (Core) graduates?
+A: Software Engineer, Full Stack Developer, System Analyst, Network Engineer, Database Administrator, and Application Developer.
+
+=== CSE (ARTIFICIAL INTELLIGENCE & MACHINE LEARNING) ===
+
+Q: What is CSE (AI & ML)?
+A: This specialization focuses on building intelligent systems that can learn, reason, and make decisions using data.
+
+Q: What subjects are taught in CSE (AI & ML)?
+A: Artificial Intelligence, Machine Learning, Deep Learning, Neural Networks, Natural Language Processing, Computer Vision, Robotics (introductory level).
+
+Q: Who should opt for CSE (AI & ML)?
+A: Students interested in automation, intelligent systems, predictive models, and future technologies should choose this stream.
+
+Q: What are the career options after CSE (AI & ML)?
+A: AI Engineer, Machine Learning Engineer, Data Analyst, Research Engineer, Robotics Engineer, and Automation Specialist.
+
+=== CSE (DATA SCIENCE) ===
+
+Q: What is CSE (Data Science)?
+A: CSE (Data Science) focuses on extracting insights from large volumes of data using statistics, programming, and machine learning techniques.
+
+Q: What subjects are included in CSE (Data Science)?
+A: Data Science Fundamentals, Big Data Analytics, Data Mining, Statistical Analysis, Machine Learning, Data Visualization, Business Intelligence Tools.
+
+Q: Who should choose CSE (Data Science)?
+A: Students who enjoy data analysis, statistics, problem-solving, and working with large datasets should opt for this specialization.
+
+Q: What job roles are available after CSE (Data Science)?
+A: Data Scientist, Data Analyst, Business Analyst, Big Data Engineer, Data Engineer, and Analytics Consultant.
+
+=== CSE (CYBER SECURITY) ===
+
+Q: What is CSE (Cyber Security)?
+A: This specialization focuses on protection of systems, networks, and data from cyber threats.
+
+Q: What subjects are included in CSE (Cyber Security)?
+A: Cyber Security, Network Security, Cryptography, Ethical Hacking, Digital Forensics.
+
+Q: What are the career options after CSE (Cyber Security)?
+A: Cyber Security Analyst, Ethical Hacker, SOC Analyst, Security Engineer.
+
+=== CSE STREAM COMPARISON ===
+
+Q: Which CSE stream is best?
+A: There is no single "best" stream. The best choice depends on your interest, aptitude, and career goals:
+- CSE (Core): Broad and flexible foundation - best for those wanting strong fundamentals
+- CSE (AI & ML): Future-focused and research-oriented - for those interested in intelligent systems and automation
+- CSE (Data Science): Industry-driven and data-centric - for those who enjoy data and analytics
+- CSE (Cyber Security): Security-focused and practice-oriented - for those interested in security, hacking & cyber defense
+
+Q: Can students pursue higher studies after specialization streams?
+A: Yes. Students can pursue M.Tech/MS/Ph.D. in CSE, AI, ML, Data Science, Cyber Security, or related interdisciplinary fields.
+
+=== CSE STREAMS COMPARISON TABLE ===
+
+Program Focus:
+- CSE (Core): Fundamental computer science and software engineering
+- CSE (AI & ML): Intelligent systems and automated decision-making
+- CSE (Data Science): Data analysis, insights, and data-driven solutions
+- CSE (Cyber Security): Protection of systems, networks, and data from cyber threats
+
+Nature of Curriculum:
+- CSE (Core): Broad and versatile
+- CSE (AI & ML): Advanced and specialization-oriented
+- CSE (Data Science): Application-oriented and industry-focused
+- CSE (Cyber Security): Security-focused and practice-oriented
+
+Key Subjects:
+- CSE (Core): Programming, Data Structures, OS, DBMS, CN, Software Engineering
+- CSE (AI & ML): AI, ML, Deep Learning, NLP, Computer Vision
+- CSE (Data Science): Data Science, Big Data, Data Mining, Statistics, Visualization
+- CSE (Cyber Security): Cyber Security, Network Security, Cryptography, Ethical Hacking, Digital Forensics
+
+Mathematics Requirement:
+- CSE (Core): Moderate
+- CSE (AI & ML): High (Linear Algebra, Probability)
+- CSE (Data Science): High (Statistics, Probability)
+- CSE (Cyber Security): Moderate (Discrete Math, Cryptography basics)
+
+Programming Skills Needed:
+- CSE (Core): C, C++, Java, Python
+- CSE (AI & ML): Python, AI frameworks
+- CSE (Data Science): Python, SQL, R, Big Data tools
+- CSE (Cyber Security): C, Python, Scripting, Networking tools
+
+Learning Approach:
+- CSE (Core): Theory + Practical
+- CSE (AI & ML): Research + Practical + Projects
+- CSE (Data Science): Practical + Case Studies
+- CSE (Cyber Security): Hands-on labs, simulations, and security audits
+
+Industry Demand:
+- CSE (Core): Consistent and stable
+- CSE (AI & ML): Rapidly growing
+- CSE (Data Science): High and data-driven
+- CSE (Cyber Security): Very high due to increasing cyber threats
+
+Career Orientation:
+- CSE (Core): General IT and software roles
+- CSE (AI & ML): Future technologies and research roles
+- CSE (Data Science): Business analytics and decision support
+- CSE (Cyber Security): Security, defense, compliance, and risk management
+
+Typical Job Roles:
+- CSE (Core): Software Engineer, Full Stack Developer, System Analyst
+- CSE (AI & ML): AI Engineer, ML Engineer, Research Engineer
+- CSE (Data Science): Data Scientist, Data Analyst, Business Analyst
+- CSE (Cyber Security): Cyber Security Analyst, Ethical Hacker, SOC Analyst, Security Engineer
+
+Placement Flexibility:
+- CSE (Core): Very High
+- CSE (AI & ML): High
+- CSE (Data Science): High
+- CSE (Cyber Security): High (IT, Finance, Govt., Defense)
+
+Higher Studies Options:
+- CSE (Core): M.Tech/MS/Ph.D. in CSE
+- CSE (AI & ML): M.Tech/MS/Ph.D. in AI/ML/CSE
+- CSE (Data Science): M.Tech/MS/Ph.D. in Data Science/Analytics
+- CSE (Cyber Security): M.Tech/MS/Ph.D. in Cyber Security/Information Security
+
+Long-Term Career Scope:
+- CSE (Core): Stable and evergreen
+- CSE (AI & ML): Highly innovative and future-oriented
+- CSE (Data Science): Expanding across all industries
+- CSE (Cyber Security): Critical and globally in-demand
+
+=== CONTACT INFORMATION ===
+
+For more information, contact:
+- Toll-free helpline: 1800-121-884444
+- Website: https://www.juet.ac.in/
+- Admissions page: https://www.juet.ac.in/jaypee/admission.php
 `;
 
 const SYSTEM_PROMPT = `You are the official JUET Guna AI Assistant. You ONLY answer questions related to Jaypee University of Engineering and Technology, Guna using the knowledge base provided below.
@@ -59,11 +350,16 @@ STRICT RULES:
 7. Provide specific numbers, dates, and details from the knowledge base when available
 
 Your knowledge base contains information about:
-- Admissions (B.Tech, M.Tech, M.Sc, PhD)
-- Fees and scholarships
-- Placements and recruiters
-- Academic departments and programs
-- Latest announcements
+- General information about JUET (location, recognition, rankings)
+- Programs offered (Diploma, B.Tech, M.Tech, M.Sc, PhD)
+- Admission procedures for all programs
+- Defence quota and fee information
+- Infrastructure and facilities (hostel, library, sports)
+- Scholarships available
+- Campus life and collaborations
+- Documents required for admission
+- Detailed CSE streams information (Core, AI & ML, Data Science, Cyber Security)
+- CSE streams comparison and career guidance
 
 JUET Knowledge Base:
 ${JUET_KNOWLEDGE}
