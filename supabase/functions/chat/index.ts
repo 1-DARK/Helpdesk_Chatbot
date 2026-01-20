@@ -56,7 +56,7 @@ For detailed fee structure of different programmes offered by the university, pl
 - No sibling discount available
 - Education loan documents provided by the university
 
-For specific programme fees, contact the Admission Cell at 1800-121-884444.`,
+For specific programme fees, contact the Admission Cell at +918982129100.`,
 
   "location": `**JUET Guna Location**
 
@@ -80,7 +80,9 @@ JUET has excellent placement records with leading companies visiting the campus.
 
 For detailed placement statistics and recruiter information, please visit the official JUET website or contact the Training & Placement Cell.
 
-**Contact:** 1800-121-884444`,
+**Contact:** 
+- Admission help line no: +918982129100
+- WhatsApp no: +918982129105`,
 
   "hostel": `**Hostel Facilities at JUET Guna**
 
@@ -112,7 +114,11 @@ All hostels have 24/7 security and WiFi connectivity.`,
 - NET/SLET/GATE qualified exempted from written test
 
 **More Info:** https://www.juet.ac.in/jaypee/admission.php
-**Helpline:** 1800-121-884444`,
+**Admission help line no:**  +918982129100
+**WhatsApp no:** +918982129105
+`,
+
+
 
   "ranking": `**JUET Guna Rankings & Recognition**
 
@@ -543,7 +549,7 @@ const SYSTEM_PROMPT = `You are the official JUET Guna AI Assistant. You ONLY ans
 
 STRICT RULES:
 1. ONLY answer questions if the information exists in the JUET Knowledge Base below
-2. If the question is NOT related to JUET or the answer is NOT in the knowledge base, respond with: "I'm sorry, this information is not available in my knowledge base. I can only help with questions about JUET Guna. For other queries, please contact JUET directly at 1800-121-884444 or visit https://www.juet.ac.in/"
+2. If the question is NOT related to JUET or the answer is NOT in the knowledge base, respond with: "I'm sorry, this information is not available in my knowledge base. I can only help with questions about JUET Guna. For other queries, please contact JUET directly at +918982129105 or visit https://www.juet.ac.in/"
 3. DO NOT use any external knowledge or make up information
 4. DO NOT answer general questions unrelated to JUET (e.g., weather, news, other universities, coding, general knowledge)
 5. Be friendly and professional
