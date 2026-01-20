@@ -533,7 +533,8 @@ Long-Term Career Scope:
 === CONTACT INFORMATION ===
 
 For more information, contact:
-- Toll-free helpline: 1800-121-884444
+- Admission help line no : +918982129100
+- WhatsApp no: +918982129105
 - Website: https://www.juet.ac.in/
 - Admissions page: https://www.juet.ac.in/jaypee/admission.php
 `;
